@@ -1,0 +1,32 @@
+/************************
+Breakpoints for SASS/SCSS
+************************/
+
+$lg-width: 75em;
+$md-width: 62em;
+$sm-width: 48em;
+$xs-width: 30em;
+
+@mixin lg {
+	@media (min-width: #{$lg-width}) {
+		@content;
+	}
+}
+
+@mixin md {
+  @media (min-width: #{$md-width}) and (max-width: #{$lg-width - 0.0625em}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (min-width: #{$sm-width}) and (max-width: #{$md-width - 0.0625em}) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @media (max-width: #{$xs-width}) {
+    @content;
+  }
+}
